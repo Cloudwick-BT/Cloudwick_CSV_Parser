@@ -20,5 +20,14 @@ public class TestParserCSV {
 		Reader test = parser.getFileReader(fileName);
 		assertNotNull(test);
 	}
+	
+	@Test
+	public void testFormat(){
+		String fileName = "F:\\Cloudwick\\java_Cloudwick\\CSVParser\\data.csv";
+		ParsingCSV parser = new ParsingCSV();
+        String str = parser.validateFormat(fileName);
+        assertEquals("application/vnd.ms-excel", str);
+
+	}
 
 }
